@@ -35,8 +35,23 @@ html, body {
   width: 100%;
   background: #000;
   color: var(--win-text);
-  cursor: default;
+  cursor: url('/cursors/default.svg') 1 1, default;
   user-select: none;
+}
+
+/* ── Windows Cursors ── */
+a, button, [role="button"], .desktop-icon, .taskbar-pin, .taskbar-start,
+.tile, .terminal-ctrl-btn, .login-btn, .start-sidebar-icon, .start-footer-btn,
+button.login-btn, button.login-btn * {
+  cursor: url('/cursors/default.svg') 1 1, pointer !important;
+}
+
+input, textarea, [contenteditable="true"], .terminal-input {
+  cursor: url('/cursors/text.svg') 5 8, text;
+}
+
+.terminal-titlebar {
+  cursor: url('/cursors/default.svg') 1 1, grab;
 }
 
 /* ── Wallpaper ── */

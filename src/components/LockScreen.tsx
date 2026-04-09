@@ -5,6 +5,14 @@ import { useState, useEffect } from 'react';
 export default function LockScreen({ onLogin }: { onLogin: () => void }) {
   const [time, setTime] = useState(new Date());
   const [loading, setLoading] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/new-backgroud.jpg';
+    img.onload = () => setReady(true);
+    img.onerror = () => setReady(true); // show UI anyway if image fails
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
@@ -23,7 +31,7 @@ export default function LockScreen({ onLogin }: { onLogin: () => void }) {
     d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
   return (
-    <div className="lock-screen lock-fade-in">
+    <div className={`lock-screen ${ready ? 'lock-fade-in' : ''}`} style={{ opacity: ready ? undefined : 0 }}>
       <div className="wallpaper" />
 
       {/* Center profile */}
