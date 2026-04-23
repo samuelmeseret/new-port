@@ -45,47 +45,45 @@ Available commands:
 
     case 'projects':
       return `
-┌──────────────────────────────────────────┐
-│             MY PROJECTS                  │
-├──────────────────────────────────────────┤
-│                                          │
-│  [01] Portfolio OS                       │
-│       Windows 11-inspired portfolio      │
-│       Next.js, React, TypeScript         │
-│                                          │
-│  [02] Cloud Dashboard                    │
-│       Real-time analytics platform       │
-│       React, D3.js, WebSockets           │
-│                                          │
-│  [03] DevConnect                         │
-│       Developer collaboration tool       │
-│       Next.js, PostgreSQL, Prisma        │
-│                                          │
-│  [04] AI Code Review                     │
-│       Automated code analysis            │
-│       Python, OpenAI, FastAPI            │
-│                                          │
-└──────────────────────────────────────────┘`;
+  MY PROJECTS
+  ===========
+
+  [01] canvas                                  (TypeScript)
+       Real-time collaborative whiteboard built with
+       Next.js, Liveblocks, Tldraw, and Convex.
+       github.com/samuelmeseret/canvas
+
+  [02] memsearch                               (TypeScript)
+       AI-powered semantic search for macOS — index
+       local files and iCloud Photos, search with
+       natural language.
+       github.com/samuelmeseret/memsearch
+
+  [03] gpt-zero-version-history-bypasser       (Python)
+       A Python application that simulates realistic
+       human typing with AI-generated text variations.
+       github.com/samuelmeseret/gpt-zero-version-history-bypasser
+
+  [04] custom-wordle                           (JavaScript)
+       A custom Wordle puzzle creator and player.
+       github.com/samuelmeseret/custom-wordle`;
 
     case 'experience':
       return `
-┌──────────────────────────────────────────┐
-│            EXPERIENCE                    │
-├──────────────────────────────────────────┤
-│                                          │
-│  ◆ Full-Stack Developer                  │
-│    Building modern web applications      │
-│    React, Next.js, Node.js, TypeScript   │
-│                                          │
-│  ◆ Frontend Engineer                     │
-│    Crafting responsive user interfaces   │
-│    React, Tailwind CSS, Figma            │
-│                                          │
-│  ◆ Open Source Contributor               │
-│    Active contributor to OSS projects    │
-│    GitHub, Community building            │
-│                                          │
-└──────────────────────────────────────────┘`;
+  EXPERIENCE
+  ==========
+
+  * Full-Stack Developer
+    Building modern web applications
+    React, Next.js, Node.js, TypeScript
+
+  * Frontend Engineer
+    Crafting responsive user interfaces
+    React, Tailwind CSS, Figma
+
+  * Open Source Contributor
+    Active contributor to OSS projects
+    GitHub, Community building`;
 
     case 'skills':
       return `
@@ -115,17 +113,14 @@ Available commands:
 
     case 'contact':
       return `
-╔════════════════════════════════════════╗
-║            CONTACT ME                  ║
-╠════════════════════════════════════════╣
-║                                        ║
-║  Email   → samuel.meseret2016@gmail.com║
-║  GitHub  → github.com/samuelmeseret   ║
-║  LinkedIn→ linkedin.com/in/samuel     ║
-║                                        ║
-║  Feel free to reach out!               ║
-║                                        ║
-╚════════════════════════════════════════╝`;
+  CONTACT ME
+  ==========
+
+  Email      samuel.meseret2016@gmail.com
+  GitHub     github.com/samuelmeseret
+  LinkedIn   linkedin.com/in/samuel
+
+  Feel free to reach out!`;
 
     case 'whoami':
       return '  samuel';
