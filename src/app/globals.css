@@ -258,7 +258,7 @@ input, textarea, [contenteditable="true"], .terminal-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 0 0 12px;
   cursor: grab;
   flex-shrink: 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -276,22 +276,32 @@ input, textarea, [contenteditable="true"], .terminal-input {
 
 .terminal-controls {
   display: flex;
-  gap: 2px;
+  align-items: stretch;
+  height: 100%;
+  gap: 0;
 }
 
 .terminal-ctrl-btn {
-  width: 36px;
-  height: 28px;
+  width: 46px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 0;
   color: var(--win-text-dim);
-  transition: all 0.12s;
+  transition: background-color 0.12s, color 0.12s;
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 14px;
+  padding: 0;
+}
+
+.terminal-ctrl-btn svg {
+  width: 10px;
+  height: 10px;
+  display: block;
+  overflow: visible;
+  shape-rendering: crispEdges;
 }
 
 .terminal-ctrl-btn:hover {

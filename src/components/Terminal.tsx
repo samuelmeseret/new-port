@@ -322,14 +322,32 @@ export default function Terminal({
       <div className="terminal-titlebar" onMouseDown={handleMouseDown}>
         <span className="terminal-title-text">Command Prompt</span>
         <div className="terminal-controls">
-          <button className="terminal-ctrl-btn" onClick={(e) => { e.stopPropagation(); onMinimize(); }}>
-            ─
+          <button
+            aria-label="Minimize"
+            className="terminal-ctrl-btn"
+            onClick={(e) => { e.stopPropagation(); onMinimize(); }}
+          >
+            <svg viewBox="0 0 10 10" aria-hidden="true">
+              <path d="M0 5 H10" stroke="currentColor" strokeWidth="1" />
+            </svg>
           </button>
-          <button className="terminal-ctrl-btn" onClick={(e) => { e.stopPropagation(); /* maximize placeholder */ }}>
-            □
+          <button
+            aria-label="Maximize"
+            className="terminal-ctrl-btn"
+            onClick={(e) => { e.stopPropagation(); /* maximize placeholder */ }}
+          >
+            <svg viewBox="0 0 10 10" aria-hidden="true">
+              <rect x="0.5" y="0.5" width="9" height="9" fill="none" stroke="currentColor" strokeWidth="1" />
+            </svg>
           </button>
-          <button className="terminal-ctrl-btn close" onClick={(e) => { e.stopPropagation(); onClose(); }}>
-            ✕
+          <button
+            aria-label="Close"
+            className="terminal-ctrl-btn close"
+            onClick={(e) => { e.stopPropagation(); onClose(); }}
+          >
+            <svg viewBox="0 0 10 10" aria-hidden="true">
+              <path d="M0 0 L10 10 M10 0 L0 10" stroke="currentColor" strokeWidth="1" />
+            </svg>
           </button>
         </div>
       </div>
